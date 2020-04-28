@@ -322,7 +322,7 @@
         "flag": "https://www.countryflags.io/CN/flat/32.png"
     },
     {
-        "name": "Hong Kong, SAR China",
+        "name": "Hong Kong",
         "alpha2": "HK",
         "alpha3": "HKG",
         "code": "344",
@@ -728,7 +728,7 @@
         "flag": "https://www.countryflags.io/ID/flat/32.png"
     },
     {
-        "name": "Iran, Islamic Republic of",
+        "name": "Iran",
         "alpha2": "IR",
         "alpha3": "IRN",
         "code": "364",
@@ -819,14 +819,14 @@
         "flag": "https://www.countryflags.io/KI/flat/32.png"
     },
     {
-        "name": "Korea (North)",
+        "name": "North Korea",
         "alpha2": "KP",
         "alpha3": "PRK",
         "code": "408",
         "flag": "https://www.countryflags.io/KP/flat/32.png"
     },
     {
-        "name": "Korea (South)",
+        "name": "South Korea",
         "alpha2": "KR",
         "alpha3": "KOR",
         "code": "410",
@@ -910,7 +910,7 @@
         "flag": "https://www.countryflags.io/LU/flat/32.png"
     },
     {
-        "name": "Macedonia, Republic of",
+        "name": "Macedonia",
         "alpha2": "MK",
         "alpha3": "MKD",
         "code": "807",
@@ -1001,7 +1001,7 @@
         "flag": "https://www.countryflags.io/MX/flat/32.png"
     },
     {
-        "name": "Micronesia, Federated States of",
+        "name": "Micronesia",
         "alpha2": "FM",
         "alpha3": "FSM",
         "code": "583",
@@ -1274,7 +1274,7 @@
         "flag": "https://www.countryflags.io/RO/flat/32.png"
     },
     {
-        "name": "Russian Federation",
+        "name": "Russia",
         "alpha2": "RU",
         "alpha3": "RUS",
         "code": "643",
@@ -1505,14 +1505,14 @@
         "flag": "https://www.countryflags.io/CH/flat/32.png"
     },
     {
-        "name": "Syrian Arab Republic (Syria)",
+        "name": "Syria",
         "alpha2": "SY",
         "alpha3": "SYR",
         "code": "760",
         "flag": "https://www.countryflags.io/SY/flat/32.png"
     },
     {
-        "name": "Taiwan, Republic of China",
+        "name": "Taiwan",
         "alpha2": "TW",
         "alpha3": "TWN",
         "code": "158",
@@ -1526,7 +1526,7 @@
         "flag": "https://www.countryflags.io/TJ/flat/32.png"
     },
     {
-        "name": "Tanzania, United Republic of",
+        "name": "Tanzania",
         "alpha2": "TZ",
         "alpha3": "TZA",
         "code": "834",
@@ -1673,7 +1673,7 @@
         "flag": "https://www.countryflags.io/VU/flat/32.png"
     },
     {
-        "name": "Venezuela (Bolivarian Republic)",
+        "name": "Venezuela",
         "alpha2": "VE",
         "alpha3": "VEN",
         "code": "862",

@@ -10,7 +10,7 @@ class Countries
   end
 
   def self.json
-    open('countries.json', 'w') do |f|
+    open("countries.json", "w") do |f|
       f.puts self.countries.to_json
     end
   end
@@ -19,11 +19,11 @@ class Countries
 
   def self.scrape_countries
     doc  = Nokogiri::HTML(open(COUNTRIES_URL))
-    rows = doc.css('table#CountryCode tr').select { |row| row.children.count == 11 }
+    rows = doc.css("table#CountryCode tr").select { |row| row.children.count == 11 }
     countries = []
 
     rows.each do |row|
-      data = row.css('td')
+      data = row.css("td")
 
       countries.push({
         name: data[1].text.strip,
@@ -34,12 +34,23 @@ class Countries
       })
     end
 
-    @@countries = self.reformat(countries)
+    @@countries = self.clean(countries)
   end
 
-  def self.reformat(countries)
+  def self.clean(countries)
     countries.each do |country|
-      country[:name] = "Vietnam" if country[:name] == 'Viet Nam'
+      country[:name] = "Vietnam"     if country[:alpha3] == "VNM"
+      country[:name] = "Venezuela"   if country[:alpha3] == "VEN"
+      country[:name] = "Tanzania"    if country[:alpha3] == "TZA"
+      country[:name] = "Taiwan"      if country[:alpha3] == "TWN"
+      country[:name] = "Syria"       if country[:alpha3] == "SYR"
+      country[:name] = "Russia"      if country[:alpha3] == "RUS"
+      country[:name] = "Micronesia"  if country[:alpha3] == "FSM"
+      country[:name] = "Macedonia"   if country[:alpha3] == "MKD"
+      country[:name] = "South Korea" if country[:alpha3] == "KOR"
+      country[:name] = "North Korea" if country[:alpha3] == "PRK"
+      country[:name] = "Iran"        if country[:alpha3] == "IRN"
+      country[:name] = "Hong Kong"   if country[:alpha3] == "HKG"
     end
 
     countries
