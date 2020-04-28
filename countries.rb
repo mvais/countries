@@ -1,7 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
 require 'json'
-require 'pry'
 
 class Countries
   COUNTRIES_URL = "https://www.nationsonline.org/oneworld/country_code_list.htm"
@@ -12,7 +11,7 @@ class Countries
 
   def self.json
     open('countries.json', 'w') do |f|
-      f.puts @@countries.to_json
+      f.puts self.countries.to_json
     end
   end
 
@@ -24,16 +23,27 @@ class Countries
     countries = []
 
     rows.each do |row|
-      data = row.text.split("\n").reject(&:empty?)
+      data = row.css('td')
 
       countries.push({
-        name: data[0].strip,
-        alpha2: data[1].strip,
-        alpha3: data[2].strip,
-        code: data[3].strip
+        name: data[1].text.strip,
+        alpha2: data[2].text.strip,
+        alpha3: data[3].text.strip,
+        code: data[4].text.strip,
+        flag: "https://www.countryflags.io/#{data[2].text.strip}/flat/32.png"
       })
     end
 
-    @@countries = countries
+    @@countries = self.reformat(countries)
+  end
+
+  def self.reformat(countries)
+    countries.each do |country|
+      country[:name] = "Vietnam" if country[:name] == 'Viet Nam'
+    end
+
+    countries
   end
 end
+
+Countries.json
